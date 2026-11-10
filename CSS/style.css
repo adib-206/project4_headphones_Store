@@ -1,0 +1,1060 @@
+:root {
+  --color-primary: #d87d4a;
+  --color-primary-light: #fbaf85;
+  --color-bg-dark: #101010;
+  --color-bg-light: #f1f1f1;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text-sub: #cfcfcf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, "Manrope";
+  background-color: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #fbaf85;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+/*============== header ==============*/
+.mainHeader {
+  background-color: var(--color-bg-dark);
+  padding-top: 32px;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.229);
+}
+.headerContainer a {
+  text-decoration: none;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bolder;
+  color: var(--color-white);
+  letter-spacing: -0.5px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-primary);
+}
+.active {
+  color: var(--color-primary) !important;
+}
+
+.cart-icon a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cart-icon i {
+  color: var(--color-white);
+  font-size: 26px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.cart-icon a:hover i {
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+/***************** hero *****************/
+#hero {
+  background-color: var(--color-bg-dark);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 16, 16, 1) 0%,
+      rgba(16, 16, 16, 0.7) 15%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(../image/HeadPhone_heroSec.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 400px;
+}
+
+.content .overline {
+  display: block;
+  font-size: 19px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: var(--color-text-sub);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--color-text-sub);
+  margin-bottom: 40px;
+}
+.hero-container a {
+  text-decoration: none;
+}
+/*********** categories section ********/
+#categories {
+  padding-top: 180px;
+  padding-bottom: 150px;
+  background-color: var(--color-white);
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.category-card {
+  flex: 1;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-img {
+  height: 120px;
+  position: relative;
+  width: 100%;
+}
+
+.category-img {
+  width: 100%;
+  max-width: 160px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(
+    0px 20px 15px rgba(0, 0, 0, 0.2)
+  ); /* إضافة ظل ناعم وواقعي أسفل المنتجات */
+}
+
+.category-title {
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-black);
+  margin-bottom: 15px;
+  margin-top: 23px; /* إبعاد النص عن حافة الصورة السفلى */
+}
+
+.shop-btn {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.shop-btn i {
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .shop-btn {
+  color: var(
+    --color-primary
+  ); /* يتحول النص للبرتقالي عند تمرير الماوس على البطاقة */
+}
+
+.category-card:hover .shop-btn i {
+  transform: translateX(5px); /* السهم يتحرك لليمين قليلاً كتأثير تفاعلي ممتع */
+}
+/* ertsd */
+/* --- العناوين المشتركة للسكشنين --- */
+.product-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+/* ========= ZX7 Speaker Section ================= */
+#zx7 {
+  padding-bottom: 48px;
+  background-color: var(--color-white);
+}
+
+.zx7-container {
+  height: 355px;
+  border-radius: 8px;
+  background:
+    linear-gradient(97deg, #ffffff57 0%, rgb(2 15 29 / 39%) 100%),
+    url(../image/studio_iris-podcast-7876792.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 95px;
+}
+.zx7-container a {
+  text-decoration: none;
+}
+
+/* ======================= YX1 Earphones================= */
+#yx1 {
+  padding-bottom: 120px;
+  background-color: var(--color-white);
+}
+
+.yx1-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.yx1-box {
+  flex: 1;
+  height: 320px;
+  border-radius: 8px;
+}
+
+.yx1-img-box {
+  background:
+    linear-gradient(257deg, #11111e4d 0%, rgb(221 55 99 / 11%) 100%),
+    url(../image/62f18b847971dbd600a37f00_image-earphones-yx1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.yx1-content-box {
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  padding-left: 85px;
+}
+.yx1-content-box a {
+  text-decoration: none;
+}
+/* ======================= About Section================= */
+#about {
+  padding-bottom: 160px;
+  background-color: var(--color-white);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.about-content {
+  width: 45%;
+}
+
+.about-title {
+  font-size: 43px;
+  line-height: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.about-title .highlight {
+  color: var(--color-primary);
+}
+
+.about-desc {
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.about-img-box {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 540px;
+  height: 520px;
+  object-fit: cover;
+  filter: grayscale(85%);
+  border-radius: 12px;
+}
+/*=============== foot ===================*/
+#mFooter {
+  background-color: var(--color-black);
+  padding-top: 60px;
+  padding-bottom: 48px;
+  position: relative;
+}
+
+.footer-container {
+  position: relative;
+}
+
+.orangeLine {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  width: 100px;
+  height: 4px;
+  background-color: var(--color-primary);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.footer-logo a {
+  font-size: 26px;
+  font-weight: bolder;
+  color: var(--color-white);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+.footer-nav ul a {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul a:hover {
+  color: var(--color-primary);
+}
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-left-col {
+  width: 50%;
+}
+
+.footer-desc {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 56px;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-right-col {
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: var(--color-white);
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+  color: var(--color-primary);
+}
+/*========================*HeadPhones*========================*/
+/*زر العودة go back*/
+.utility-bar {
+  padding-top: 80px;
+  padding-bottom: 56px;
+}
+
+.go-back-btn {
+  font-size: 18px;
+  color: var(--color-text-sub);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.go-back-btn:hover {
+  color: var(--color-primary);
+}
+
+/* ============productIntro Section============ */
+#productIntro {
+  padding-bottom: 80px;
+  background-color: var(--color-white);
+}
+
+.productIntro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 125px;
+}
+
+.product-main-img-box {
+  flex: 1;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.product-main-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.06));
+}
+
+.product-main-info {
+  width: 45%;
+}
+
+.product-main-info .overline-text {
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.product-detail-title {
+  font-size: 42px;
+  line-height: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.product-detail-desc {
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 32px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--color-black);
+  margin-bottom: 47px;
+}
+
+/* --- شريط التحكم التفاعلي بالكمية والزر --- */
+.product-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.quantity-selector {
+  width: 120px;
+  height: 48px;
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.qty-btn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(221 55 99 / 43%);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.qty-btn:hover {
+  color: var(--color-primary);
+}
+
+.qty-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+/* <!-- section productFeatures --> */
+#productFeatures {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: var(--color-white);
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 125px;
+}
+
+.detail-section-title {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.features-block {
+  width: 60%;
+}
+
+.features-text {
+  font-size: 17px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 24px;
+}
+
+.features-block .features-text:last-child {
+  margin-bottom: 0;
+}
+
+.box-contents-block {
+  width: 35%;
+}
+
+.box-items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.box-items-list li {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.item-qty {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-right: 24px;
+  display: inline-block;
+  width: 25px;
+}
+/*       <!-- productGallery section --> */
+
+#productGallery {
+  padding-bottom: 120px;
+  background-color: var(--color-white);
+}
+
+#productGallery .gallery-container {
+  display: grid;
+  grid-template-columns: 4fr 6fr; /* العمود الأيسر يأخذ 40% والأيمن 60% من المساحة */
+  gap: 32px;
+}
+
+.gallery-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* نفس قيمة الـ gap لتناسق الأبعاد */
+}
+
+.gallery-img-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+}
+
+.gallery-left-col .gallery-img-box {
+  height: 280px;
+}
+
+/* الصندوق الكبير يميناً يأخذ الارتفاع الكامل الموازي للصورتين مع الـ gap */
+.gallery-right-col .large-box {
+  height: 592px; /* (280 + 280 + 32 gap) = 592px*/
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: grayscale(75%);
+}
+
+.gallery-img-box:hover .gallery-img {
+  transform: scale(1.3);
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+/*       <!-- relatedProducts section --> */
+#relatedProducts {
+  padding-bottom: 210px;
+  background-color: var(--color-white);
+}
+
+.related-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية العرض تماماً */
+  gap: 30px; /* مسافة أفقية ثابتة بين الكروت */
+}
+.related-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.related-img-box {
+  width: 100%;
+  height: 318px;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.related-img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.related-product-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.related-product-card:hover .related-img {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/***********************= cart =******/
+
+#checkout {
+  background-color: var(--color-bg-light);
+  padding-top: 40px;
+  padding-bottom: 140px;
+}
+
+.checkout-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* تقسيم هندسي: الثلثين للاستمارة والثلث للملخص */
+  gap: 30px;
+  align-items: start;
+}
+
+/* الكرت الأبيض الكبير الخاص ببيانات الاستمارة */
+#checkout-billing-form {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 48px;
+}
+
+.checkout-main-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.form-section-block {
+  margin-bottom: 48px;
+}
+
+.form-section-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* شبكة الحقول الداخلية*/
+.inputs-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+}
+
+.span-full-width {
+  grid-column: span 2;
+}
+
+.form-control-box {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-control-box label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.form-control-box input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-black);
+  font-family: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control-box input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+  outline: none;
+}
+
+/* --- تنسيقات  طرق الدفع المتطورة --- */
+.payment-method-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.payment-label-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-top: 18px;
+}
+
+.payment-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/*تشيك طرق الدفع radio*/
+.custom-radio-card {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-black);
+  transition: border-color 0.2s ease;
+}
+
+/* إخفاء زر الراديو التقليدي الافتراضي الخاص بالمتصفح */
+.custom-radio-card input[type="radio"] {
+  display: none;
+}
+
+/* الدائرة الخارجية المخصصة للراديو */
+.radio-dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* النقطة البرتقالية الداخلية عند التفعيل */
+.custom-radio-card input[type="radio"]:checked + .radio-dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: block;
+}
+
+.custom-radio-card input[type="radio"]:checked ~ .radio-text {
+  color: var(--color-black);
+}
+
+/* تبديل إطار البوكس للون البرتقالي عند التحديد */
+.custom-radio-card:has(input[type="radio"]:checked) {
+  border-color: var(--color-primary);
+}
+
+.emoney-details-fields {
+  margin-top: 24px;
+}
+
+/* ==========================================
+   تنسيق كرت ملخص الفاتورة (Summary Sidebar)
+   ========================================== */
+
+#checkout-summary-sidebar {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.summary-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--color-black);
+}
+
+.summary-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary-item-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-item-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-thumb {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.summary-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.summary-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.summary-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 4px;
+}
+
+.summary-qty-count {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* بلوك العمليات الحسابية النهائية */
+.summary-calculations-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-label {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.calc-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+/* السطر الأخير الخاص بالـ Grand Total */
+.grand-total-row {
+  margin-top: 16px;
+}
+
+.calc-val-grand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
